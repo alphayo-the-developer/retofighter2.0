@@ -1,0 +1,256 @@
+/*  */
+
+
+.containnerCharacter {
+  background: radial-gradient(rgba(118, 0, 191, 0.5) 0%, transparent 70%), linear-gradient(#0b161e 40%, #202076 70%);
+  display: grid;
+  grid-template-columns: 35% 30% 35%;
+  grid-template-rows: 100%;
+  height: 100vh;
+  /* width: 100vh; */
+}
+
+.gridCharacter {
+  background: linear-gradient(transparent 65%, rgba(46, 38, 255, 0.4) 75%, #7d41e6 80%, rgba(46, 38, 255, 0.4) 85%, transparent 95%), linear-gradient(90deg, transparent 65%, rgba(46, 38, 255, 0.4) 75%, #7d41e6 80%, rgba(46, 38, 255, 0.4) 85%, transparent 95%);
+  background-size: 30px 30px;
+  width: 10vw;
+  height: 40vh;
+  position: absolute;
+  bottom: -120vh;
+  transform: rotateX(-100deg);
+  -webkit-mask-image: linear-gradient(black, rgba(0, 0, 0, 0) 80%);
+}
+
+.player1 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.player2 {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.largeImg {
+  width: 100%;
+  height: 180%;
+}
+
+#p1Select {
+  width: 100%;
+  height: 100%;
+}
+
+#p2Select {
+  width: 100%;
+  height: 100%;
+}
+
+/* 
+#p1wizard {
+  visibility: hidden;
+  background: url(/img/samuraiMack/Idle.png);
+  background-position: 550 -30;
+
+} */
+
+#martial1 {
+  background: url(/img/martial/Idle.png);
+  background-position: 610 -20;
+  
+
+}
+/* .largeImg {
+  width: 120px;
+  height: 128px;
+  background: url(../img/commander/Idle.png);
+  animation: kick 1s steps(5) infinite;
+} */
+
+@keyframes kick {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 600 0;
+  }
+}
+
+.vs {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: 100%;
+}
+
+.vs {
+  height: 90vh;
+}
+.player1img {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.player1img img {
+  width: 100%;
+  height: 100%;
+}
+
+.player2img {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+}
+
+.player2img img {
+  width: 100%;
+  height: 100%;
+}
+
+.logo {
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.border {
+  border: 5px solid red;
+  border-radius: 10px;
+}
+
+.bodyCharcter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* background: radial-gradient(rgba(118, 0, 191, 0.5) 0%, transparent 70%),
+    linear-gradient(#0b161e 40%, #202076 70%); */
+  perspective: 700px;
+  font-size: clamp(10px, 2vw, 20px);
+  /* height: 100%; */
+}
+
+.lines {
+  position: fixed;
+  /* width: 100vw;
+  height: 4em; */
+  background: linear-gradient(
+    rgba(89, 193, 254, 0.2) 20%,
+    #59c1fe 40%,
+    #59c1fe 60%,
+    rgba(89, 193, 254, 0.2) 80%
+  );
+  background-size: 1px 0.5em;
+  box-shadow: 0 0 1em rgba(89, 193, 254, 0.4);
+  transform: translateY(-1em);
+  left: 0;
+}
+
+h1 {
+  position: relative;
+  font-family: 'Exo';
+  font-size: 40px;
+  margin: 0;
+  transform: skew(-15deg);
+  letter-spacing: 0.03em;
+}
+h1::after {
+  content: '';
+  position: absolute;
+  top: 0.1em;
+  right: 0.05em;
+  width: 0.4em;
+  height: 0.4em;
+  background: radial-gradient(
+      white 3%,
+      rgba(255, 255, 255, 0.3) 15%,
+      rgba(255, 255, 255, 0.05) 60%,
+      transparent 80%
+    ),
+    radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/5%
+      100%,
+    radial-gradient(rgba(255, 255, 255, 0.2) 50%, transparent 60%) 50% 50%/70%
+      5%;
+  background-repeat: no-repeat;
+}
+h1 span:first-child {
+  display: block;
+  text-shadow: 0 0 0.1em #8ba2d0, 0 0 0.2em black, 0 0 5em #165ff3;
+  -webkit-text-stroke: 0.06em rgba(0, 0, 0, 0.5);
+}
+h1 span:last-child {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(
+    #032d50 25%,
+    #00a1ef 35%,
+    white 50%,
+    #20125f 50%,
+    #8313e7 55%,
+    #ff61af 75%
+  );
+  -webkit-text-stroke: 0.01em #94a0b9;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 {
+  font-family: 'Mr Dafoe';
+  margin: 0;
+  font-size: 20px;
+  margin-top: -0.6em;
+  color: white;
+  text-shadow: 0 0 0.05em #fff, 0 0 0.2em #fe05e1, 0 0 0.3em #fe05e1;
+  transform: rotate(-7deg);
+}
+
+.gridCharacter {
+  background: linear-gradient(
+      transparent 65%,
+      rgba(46, 38, 255, 0.4) 75%,
+      #7d41e6 80%,
+      rgba(46, 38, 255, 0.4) 85%,
+      transparent 95%
+    ),
+    linear-gradient(
+      90deg,
+      transparent 65%,
+      rgba(46, 38, 255, 0.4) 75%,
+      #7d41e6 80%,
+      rgba(46, 38, 255, 0.4) 85%,
+      transparent 95%
+    );
+  background-size: 30px 30px;
+  /* width: 200vw;
+  height: 300vh; */
+  position: absolute;
+  /* bottom: -120vh; */
+  transform: rotateX(-100deg);
+  -webkit-mask-image: linear-gradient(black, rgba(0, 0, 0, 0) 80%);
+}
+
+
+#next {
+  display: block;
+  position: absolute;
+  top: 90%;
+  left: 48%;
+}
+
+#back {
+  display: block;
+  position: absolute;
+  top: 95%;
+  left: 48%;
+}
